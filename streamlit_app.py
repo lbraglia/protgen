@@ -8,34 +8,34 @@ import tempfile
 from pathlib import Path
 
 
-# # File uploader
-# xlsx = st.file_uploader(label = "Fai l'upload del file struttura qui, dopodiché clicca su 'Download CRF'.",
-#                         type = ["xlsx"],
-#                         accept_multiple_files = False)
+# Include README
+with open('frontpage.md', 'r') as fp:
+    frontpage = fp.read()
+st.markdown(frontpage)
 
-# if xlsx is not None:
-#     struc = tempfile.NamedTemporaryFile(suffix = '.xlsx')
-#     out = tempfile.NamedTemporaryFile(suffix = '.xlsx')
-#     strucfile = struc.name
-#     outfile = out.name
-#     # salvo per comodità il file in un file
-#     with open(strucfile, "wb") as f:
-#         f.write(xlsx.getbuffer())
-#     crf = CRF()
-#     crf.read_structure(strucfile)
-#     crf.create(outfile)
-    
+# Parameters
+template_dir = Path("templates")
 
-template_path = Path("jinja_templates") / "spirit2025.md"
+# User data input
+st.text_input("**Acronimo studio**", key="ACRONIMO_STUDIO")
+
+
+available_templates = {
+    "SPIRIT2025 (studi sperimentali)": "spirit2025.md",
+    "STROBE (studi osservazionali)": "strobe2010.md",
+    "STARD (studi diagnostici)": "stard2015.md"
+}
+chosen_template = st.selectbox("**Template adottato**", available_templates.keys())
+template_path = template_dir / available_templates[chosen_template]
 with open(template_path, "r") as f:
     content = f.read()
 
 
+# Jinja magic
 variables = {
     "TODAY": dt.date.today().isoformat(),
-    "ACRONIMO_STUDIO": "ACRONIMORCT"
+    "ACRONIMO_STUDIO": st.session_state.ACRONIMO_STUDIO
 }
-
 environment = jinja2.Environment()
 template = environment.from_string(content)
 result = template.render(**variables)
@@ -61,7 +61,3 @@ with open(outfile, "rb") as f:
         file_name="protocol_template.docx")
 
 
-# Include README
-with open('frontpage.md', 'r') as fp:
-    frontpage = fp.read()
-st.markdown(frontpage)
