@@ -20,25 +20,35 @@ template_dir = Path("templates")
 st.text_input("**Acronimo studio**", key="ACRONIMO_STUDIO")
 
 
-available_templates = {
-    "SPIRIT2025 (studi sperimentali)": "spirit2025.md",
-    "STROBE (studi osservazionali)": "strobe2010.md",
-    "STARD (studi diagnostici)": "stard2015.md"
+active_templates = {
+    "SPIRIT 2025 (studi sperimentali)": "spirit2025.md",
+    "STROBE 2007 (studi osservazionali)": "strobe2007.md",
+    "STARD 2015 (studi diagnostici)": "stard2015.md",
+    "Template agnostico, semplice, italiano": "ctsu.md"
 }
-chosen_template = st.selectbox("**Template adottato**", available_templates.keys())
-template_path = template_dir / available_templates[chosen_template]
+chosen_template = st.selectbox("**Template adottato**",
+                               active_templates.keys())
+template_path = template_dir / active_templates[chosen_template]
 with open(template_path, "r") as f:
     content = f.read()
 
 
+template_specific = {}
+
 # Jinja magic
-variables = {
-    "TODAY": dt.date.today().isoformat(),
-    "ACRONIMO_STUDIO": st.session_state.ACRONIMO_STUDIO
+# -----------
+acronimo_studio = st.session_state.ACRONIMO_STUDIO
+user_input = {
+    "ACRONIMO_STUDIO": acronimo_studio
 }
+common = {
+    "TODAY": dt.date.today().isoformat()
+}
+
+jinja_variables = user_input | common | template_specific
 environment = jinja2.Environment()
 template = environment.from_string(content)
-result = template.render(**variables)
+result = template.render(**jinja_variables)
 
 tmpf = tempfile.mkstemp()
 tmpfname = tmpf[1]
@@ -49,15 +59,12 @@ with open(tmpfname, "w") as f:
 
 
 # pandoc
-outfile = Path(f"/tmp/{variables["ACRONIMO_STUDIO"]}_study_protocol.docx")
-pandoc = ["pandoc", tmpfname, "-f", "gfm", "-t", "docx", "-o", str(outfile)]
+# ------
+outfile = Path(f"/tmp/{acronimo_studio}_study_protocol.docx")
+pandoc = f"pandoc {tmpfname} -f gfm -t docx -o {outfile}".split(" ")
 subprocess.run(pandoc)
-
-
 with open(outfile, "rb") as f:
     btn = st.download_button(
         label="Download Protocol",
         data=f,
-        file_name="protocol_template.docx")
-
-
+        file_name=outfile.name)
