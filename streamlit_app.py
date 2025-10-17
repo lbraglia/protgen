@@ -16,16 +16,18 @@ st.markdown(frontpage)
 # Parameters
 template_dir = Path("templates")
 
-# User data input
-st.text_input("**Acronimo studio**", key="ACRONIMO_STUDIO")
-
-
 active_templates = {
     "SPIRIT 2025 (studi sperimentali)": "spirit2025.md",
     "STROBE 2007 (studi osservazionali)": "strobe2007.md",
     "STARD 2015 (studi diagnostici)": "stard2015.md",
-    "Template agnostico, semplice, italiano": "ctsu.md"
+    "Template agnostico, semplice, italiano": "old_ctsu.md"
 }
+
+
+# User data input
+# ----------------
+st.text_input("**Acronimo studio**", key="ACRONIMO_STUDIO")
+
 chosen_template = st.selectbox("**Template adottato**",
                                active_templates.keys())
 template_path = template_dir / active_templates[chosen_template]
@@ -60,7 +62,8 @@ with open(tmpfname, "w") as f:
 
 # pandoc
 # ------
-outfile = Path(f"/tmp/{acronimo_studio}_study_protocol.docx")
+acronimo_prefix = f"{acronimo_studio}_" if acronimo_studio != "" else ""
+outfile = Path(f"/tmp/{acronimo_prefix}study_protocol.docx")
 pandoc = f"pandoc {tmpfname} -f gfm -t docx -o {outfile}".split(" ")
 subprocess.run(pandoc)
 with open(outfile, "rb") as f:
