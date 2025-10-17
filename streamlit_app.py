@@ -20,9 +20,14 @@ active_templates = {
     "SPIRIT 2025 (studi sperimentali)": "spirit2025.md",
     "STROBE 2007 (studi osservazionali)": "strobe2007.md",
     "STARD 2015 (studi diagnostici)": "stard2015.md",
-    "Template agnostico, semplice, italiano": "old_ctsu.md"
+    "Template agnostico, italiano, semplice": "old_ctsu.md"
 }
 
+# statistici_attivi = {
+#     "": "",
+#     "Debora": "Debora Formisano",
+#     "Luca": "Luca Braglia"
+# }
 
 # User data input
 # ----------------
@@ -34,6 +39,12 @@ template_path = template_dir / active_templates[chosen_template]
 with open(template_path, "r") as f:
     content = f.read()
 
+st.markdown("**Opzioni**")
+farmacologico = st.checkbox("Farmacologico")
+
+
+# statistico = st.selectbox("**Statistico**", statistici_attivi.keys())
+
 
 template_specific = {}
 
@@ -44,7 +55,10 @@ user_input = {
     "ACRONIMO_STUDIO": acronimo_studio
 }
 common = {
-    "TODAY": dt.date.today().isoformat()
+    "TODAY": dt.date.today().isoformat(),
+    "PROTOCOL_VERSION": 1,
+    "STUDIO_FARMACOLOGICO": farmacologico,
+    # "STATISTICO": statistico
 }
 
 jinja_variables = user_input | common | template_specific
@@ -66,6 +80,8 @@ acronimo_prefix = f"{acronimo_studio}_" if acronimo_studio != "" else ""
 outfile = Path(f"/tmp/{acronimo_prefix}study_protocol.docx")
 pandoc = f"pandoc {tmpfname} -f gfm -t docx -o {outfile}".split(" ")
 subprocess.run(pandoc)
+
+
 with open(outfile, "rb") as f:
     btn = st.download_button(
         label="Download Protocol",

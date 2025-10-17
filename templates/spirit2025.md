@@ -4,7 +4,9 @@ brackets (e.g. [21a]) are SPIRIT 2025 item identifiers.
 
 **Lista cose da fare:**
 
-- **compilare facendo riferimento a SPIRIT 2025 explanation and elaboration (numeri tra graffe) che fornisce esempi da letteratura pubblicata e spiegazioni su cosa mettere in ciascun punto**
+- **compilare facendo riferimento a SPIRIT 2025 explanation and elaboration
+  (https://doi.org/10.1136/bmj-2024-081660) che fornisce esempi da letteratura
+  pubblicata e spiegazioni su cosa mettere in ciascuna sezione**
 
 - **aggiungere bibliografia alla fine**
 
@@ -23,7 +25,7 @@ brackets (e.g. [21a]) are SPIRIT 2025 item identifiers.
 
 ## Title [1a]
 
-*Title stating the trial design, population, and interventions, with identification as a protocol*
+*Title stating the trial design, population, and interventions, with identification as a protocol.*
 
 **[INFO: è buona regola anche mettere l'acronimo dello studio nel titolo. Eg
 "descrizione dello studio: the [ACRONIMO DA DECIDERE] study protocol."]**
@@ -34,14 +36,12 @@ brackets (e.g. [21a]) are SPIRIT 2025 item identifiers.
 ## Structured summary [1b]
 
 *Structured summary of trial design and methods, including items from the World
-Health Organization Trial Registration Data Set*
-
-[**INFO: meglio rimandare la compilazione della tabella a fine protocollo;
-completarla (quasi copiando/incollando dal protocollo finito) seguendo**
+Health Organization Trial Registration Data Set.  INFO: rimandare la
+compilazione della tabella a fine protocollo; completarla seguendo
 https://www.who.int/publications/i/item/international-standards-for-clinical-trial-registers
-**(pg 21 sgg). Sotto si è aggiunto study acronym che per il lato amministrativo
-è molto importante mentre nel WHO non è presente/separato dallo scientific
-title)**]
+(pg 21 sgg).*
+
+
 
 | **Item**                                      | **Value**                         |
 |:----------------------------------------------|:----------------------------------|
@@ -74,7 +74,7 @@ title)**]
 
 *Version date and identifier*
 
-Version/Date: Version 1.0 ({{TODAY}})
+Version/Date: Version {{PROTOCOL_VERSION}} ({{TODAY}})
 
 
 
@@ -82,12 +82,6 @@ Version/Date: Version 1.0 ({{TODAY}})
 ## Protocol contributors [3a]
 
 *Names, affiliations, and roles of protocol contributors*
-
-[**INFO: inserire vostri nomi, affiliazioni e contributi; contemplerei anche
-un/una data manager/CRC se non già presente nel team (questa è una frase
-standard del template)**]
-
-Luca Braglia, Clinical Trial Center, IRCCS RE, study design and statistical analysis.
 
 All authors contributed to the writing and approved the final version of the
 study protocol; artificial intelligence language models were used to assist
@@ -151,7 +145,7 @@ diffusion.
 registration. If not yet registered, name of intended registry*
 
 This study will be registered on ClinicalTrials.gov before recruitment of first
-trial participant. [**INFO: da ricordarsi di farlo**]
+trial participant.
 
 
 
@@ -163,7 +157,7 @@ trial participant. [**INFO: da ricordarsi di farlo**]
 The study protocol, for which no separate Statistical Analysis Plan (SAP) is
 planned, will be made publicly available through upload/attachment on
 ClinicalTrials.org of full approved version; eventually even by scientific
-publication.[**INFO: da ricordarsi di farlo**]
+publication.
 
 
 
@@ -184,8 +178,7 @@ study report has been published.
 
 *Sources of funding and other support (eg, supply of drugs)*
 
-The study is financed by our institution, AUSL RE - IRCCS through [**CHECK:
-fondi di reparto per assicurazione?**]
+The study is financed by our institution, AUSL RE - IRCCS
 
 [**CHECK: altri finanziamenti?**]
 
@@ -216,8 +209,6 @@ Within one year of obtaining the final analysis results we will submit our
 findings for publication in a peer-reviewed scholarly journal (following the
 most recent ICMJE recommendations), update the ClinicalTrials.gov record
 accordingly, and present the results at medical conferences.
-
-[**CHECK: può andare bene?**]
 
 
 
@@ -255,9 +246,6 @@ conduct, and reporting of the trial*
 
 No patient or public involvement (in design, conduct or reporting) was
 considered for this study.
-
-[**CHECK: questa è una cosa abbastanza "inglese"/di avanguardia (credo), se
-invece avete idee/cose seguendo la guideline, riempite pure.**]
 
 
 
