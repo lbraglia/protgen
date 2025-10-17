@@ -43,9 +43,8 @@ https://www.who.int/publications/i/item/international-standards-for-clinical-tri
 è molto importante mentre nel WHO non è presente/separato dallo scientific
 title)**]
 
-|-----------------------------------------------|-----------------------------------|
 | **Item**                                      | **Value**                         |
-|-----------------------------------------------|-----------------------------------|
+|:----------------------------------------------|:----------------------------------|
 | Primary registry and trial identifying number | ClinicalTrials.gov - NA           |
 | Secondary identifying numbers                 | NA                                |
 | Source(s) of monetary or material support     | Azienda USL Reggio Emilia - IRCCS |
@@ -75,7 +74,7 @@ title)**]
 
 *Version date and identifier*
 
-Version/Date: Version 1.0 (**[CHECK: {{TODAY}}**)
+Version/Date: Version 1.0 ({{TODAY}})
 
 
 

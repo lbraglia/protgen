@@ -1,10 +1,10 @@
 |                                |                                                                                                                                                                     |
 |:-------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Titolo dello studio**        |                                                                                                                                                                     |
-| **Acronimo**                   |                                                                                                                                                                     |
+| **Acronimo**                   | {{ACRONIMO_STUDIO}}                                                                                                                                                 |
 | **Versione protocollo**        | 1.0                                                                                                                                                                 |
-| **Data rilascio protocollo**   |                                                                                                                                                                     |
-| **Codici registrazione**       | se applicabili (es ClinicalTrials.gov: NCT01066572)                                                                                                                 |
+| **Data  protocollo**           | {{TODAY}}                                                                                                                                                           |
+| **Codici registrazione**       |                                                                                                                                                                     |
 | **Promotore**                  | Azienda farmaceutica, gruppo cooperativo, ente non profit che promuove lo studio. Nel caso di studi spontanei locali inserire Azienda USL - IRCCS di Reggio Emilia. |
 | **Proponente**                 | Nome e qualifica delle persone autorizzate a firmare il protocollo e gli emendamenti a nome del promotore. Data e firma, per accettazione.                          |
 | **Partecipanti**               | Sperimentatori responsabili della conduzione dello studio con relativa strutture di appartenenza ( es.: strutture specialistiche e laboratori ...).                 |
@@ -20,9 +20,9 @@
 
 # Background
 
-Fornire una sintesi sulla problematica affrontata (es la patologia), sulla
+*Fornire una sintesi sulla problematica affrontata (es la patologia), sulla
 attuale pratica clinica (es da linee guida), e sulle questioni attualmente
-aperte (con riferimento aggiornato alla letteratura esistente).
+aperte (con riferimento aggiornato alla letteratura esistente).*
 
 
 # Lo studio
