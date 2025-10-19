@@ -23,6 +23,11 @@ active_templates = {
     "Template agnostico, italiano, semplice": "old_ctsu.md"
 }
 
+data_collection = {
+    "REDCap": "redcap",
+    "Excel": "excel"
+}
+
 # statistici_attivi = {
 #     "": "",
 #     "Debora": "Debora Formisano",
@@ -43,7 +48,7 @@ st.markdown("**Opzioni**")
 farmacologico = st.checkbox("Farmacologico")
 
 
-# statistico = st.selectbox("**Statistico**", statistici_attivi.keys())
+crf = st.selectbox("**CRF**", data_collection.keys())
 
 
 template_specific = {}
