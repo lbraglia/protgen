@@ -1,10 +1,8 @@
-\newpage
-
-*La struttura seguente ricalca la guideline di reporting STROBE (i numeri tra
+La struttura seguente ricalca la guideline di reporting STROBE (i numeri tra
 parentesi quadre, che si consiglia di lasciare, indicano gli item della
 stessa); ai fini della compilazione delle parti di propria competenza si
 consiglia di fare riferimento allo [STROBE explanation and
-elaboration](https://doi.org/10.1371/journal.pmed.0040297)*
+elaboration](https://doi.org/10.1371/journal.pmed.0040297)
 
 
 # Title [1a]

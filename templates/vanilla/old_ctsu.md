@@ -1,5 +1,21 @@
-\newpage
+|                                |                                                                                                                                                                     |
+|:-------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Titolo dello studio**        |                                                                                                                                                                     |
+| **Acronimo**                   | {{ACRONIMO_STUDIO}}                                                                                                                                                 |
+| **Versione protocollo**        | 1.0                                                                                                                                                                 |
+| **Data  protocollo**           | {{TODAY}}                                                                                                                                                           |
+| **Codici registrazione**       |                                                                                                                                                                     |
+| **Promotore**                  | Azienda farmaceutica, gruppo cooperativo, ente non profit che promuove lo studio. Nel caso di studi spontanei locali inserire Azienda USL - IRCCS di Reggio Emilia. |
+| **Proponente**                 | Nome e qualifica delle persone autorizzate a firmare il protocollo e gli emendamenti a nome del promotore. Data e firma, per accettazione.                          |
+| **Partecipanti**               | Sperimentatori responsabili della conduzione dello studio con relativa strutture di appartenenza ( es.: strutture specialistiche e laboratori ...).                 |
+| **Recapiti randomizzazione**   |                                                                                                                                                                     |
+| **Referenti farmacovigilanza** |                                                                                                                                                                     |
+| **Referente statistico**       |                                                                                                                                                                     |
+| **Referente monitoraggio**     |                                                                                                                                                                     |
 
+  
+  
+ 
   
 
 # Background

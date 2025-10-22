@@ -1,6 +1,3 @@
-\newpage
-
-
 This protocol is written according to SPIRIT 2025 guideline; numbers in square
 brackets (e.g. [21a]) are SPIRIT 2025 item identifiers.
 
@@ -21,8 +18,7 @@ brackets (e.g. [21a]) are SPIRIT 2025 item identifiers.
 
 - **fare un check della formattazione che in seguito a vari edit potrebbe essere sporca**
 
-
-
+	
 
 
 # Administrative information

@@ -1,7 +1,5 @@
-\newpage
-
-*This protocol is written according to STARD 2015 guideline; numbers in square
-brackets (e.g. [10a]) are STARD item identifiers.*
+This protocol is written according to STARD 2015 guideline; numbers in square
+brackets (e.g. [10a]) are STARD item identifiers.
 
 **Lista cose da fare: 
 
@@ -12,7 +10,6 @@ brackets (e.g. [10a]) are STARD item identifiers.*
   data del protocollo
 - cancellare questa frase e tutte le frasi che danno suggerimenti nelle varie
   sezioni**
-
 
 # Title [1]
 

@@ -15,60 +15,88 @@ st.markdown(frontpage)
 
 # Parameters
 template_dir = Path("templates")
+commond_dir = Path("common")
 
-active_templates = {
+common = {
+    "TODAY": dt.date.today().isoformat(),
+    "PROTOCOL_VERSION": 1,
+}
+
+templates = {
     "SPIRIT 2025 (studi sperimentali)": "spirit2025.md",
     "STROBE 2007 (studi osservazionali)": "strobe2007.md",
     "STARD 2015 (studi diagnostici)": "stard2015.md",
     "Template agnostico, italiano, semplice": "old_ctsu.md"
 }
 
-data_collection = {
-    "REDCap": "redcap",
-    "Excel": "excel"
+monomulti = {
+    "Monocentrico": "monocentrico",
+    "Multicentrico": "multicentrico"
 }
 
-# statistici_attivi = {
-#     "": "",
-#     "Debora": "Debora Formisano",
-#     "Luca": "Luca Braglia"
-# }
+retroprospettico = {
+    "Retrospettivo": "retrospettivo",
+    "Retrospettivo e Prospettico": "retrospettivo_e_prospettico",
+    "Prospettico": "prospettico",
+}
 
 # User data input
 # ----------------
 st.text_input("**Acronimo studio**", key="ACRONIMO_STUDIO")
+acronimo_studio = st.session_state.ACRONIMO_STUDIO
 
-chosen_template = st.selectbox("**Template adottato**",
-                               active_templates.keys())
-template_path = template_dir / active_templates[chosen_template]
+
+def selbox_value(tit, d):
+    sel = st.selectbox(tit, d.keys())
+    return d[sel]
+
+
+template_fname = selbox_value("**Template adottato**", templates)
+template_path = template_dir / template_fname
+monomulti_sel = selbox_value("**Mono/multicentrico**", monomulti)
+retroprospettico_sel = selbox_value("**Retrospettivo/Prospettico**", retroprospettico)
+
+# st.markdown("**Opzioni**")
+# farmacologico = st.checkbox("Farmacologico")
+
+
+user_input = {
+    "ACRONIMO_STUDIO": acronimo_studio,
+    "MONOMULTI": monomulti_sel,
+    "RETROPROSPETTICO": retroprospettico_sel,
+}
+
+
+
+# Protocol actual creation
+# -------------------------
+common_intros = ["administrative_info.md", "revision_chronology.md",
+                 "signature_page.md", "abbreviations.md"]
+
+# common intro
+intro = []
+for intropart in common_intros:
+    with open(commond_dir / intropart, "r") as f:
+        intro.append(f.read())
+
+intro = "\n".join(intro)
+
+# different template
 with open(template_path, "r") as f:
     content = f.read()
 
-st.markdown("**Opzioni**")
-farmacologico = st.checkbox("Farmacologico")
+# common outro
+with open(commond_dir / "outro.md", "r") as f:
+    outro = f.read()
 
+created_template = intro + content + outro
 
-crf = st.selectbox("**CRF**", data_collection.keys())
-
-
-template_specific = {}
 
 # Jinja magic
 # -----------
-acronimo_studio = st.session_state.ACRONIMO_STUDIO
-user_input = {
-    "ACRONIMO_STUDIO": acronimo_studio
-}
-common = {
-    "TODAY": dt.date.today().isoformat(),
-    "PROTOCOL_VERSION": 1,
-    "STUDIO_FARMACOLOGICO": farmacologico,
-    # "STATISTICO": statistico
-}
-
-jinja_variables = user_input | common | template_specific
+jinja_variables = common | user_input
 environment = jinja2.Environment()
-template = environment.from_string(content)
+template = environment.from_string(created_template)
 result = template.render(**jinja_variables)
 
 tmpf = tempfile.mkstemp()
@@ -83,7 +111,8 @@ with open(tmpfname, "w") as f:
 # ------
 acronimo_prefix = f"{acronimo_studio}_" if acronimo_studio != "" else ""
 outfile = Path(f"/tmp/{acronimo_prefix}study_protocol.docx")
-pandoc = f"pandoc {tmpfname} -f gfm -t docx -o {outfile}".split(" ")
+# pandoc = f"pandoc {tmpfname} --filter=pandoc-docx-pagebreakpy -f markdown -t docx -o {outfile}".split(" ")
+pandoc = f"pandoc {tmpfname} --lua-filter filters/pagebreak.lua -f markdown -t docx -o {outfile}".split(" ")
 subprocess.run(pandoc)
 
 
