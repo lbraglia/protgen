@@ -42,6 +42,8 @@ retroprospettico = {
 
 # User data input
 # ----------------
+st.text_input("**Titolo studio**", key="TITOLO_STUDIO")
+titolo_studio = st.session_state.TITOLO_STUDIO
 st.text_input("**Acronimo studio**", key="ACRONIMO_STUDIO")
 acronimo_studio = st.session_state.ACRONIMO_STUDIO
 
@@ -61,6 +63,7 @@ retroprospettico_sel = selbox_value("**Retrospettivo/Prospettico**", retroprospe
 
 
 user_input = {
+    "TITOLO_STUDIO": titolo_studio,
     "ACRONIMO_STUDIO": acronimo_studio,
     "MONOMULTI": monomulti_sel,
     "RETROPROSPETTICO": retroprospettico_sel,
@@ -71,7 +74,8 @@ user_input = {
 # Protocol actual creation
 # -------------------------
 common_intros = ["administrative_info.md", "revision_chronology.md",
-                 "signature_page.md", "abbreviations.md"]
+                 "signature_page.md", "abbreviations.md", "toc.md"
+                 ]
 
 # common intro
 intro = []
@@ -112,7 +116,8 @@ with open(tmpfname, "w") as f:
 acronimo_prefix = f"{acronimo_studio}_" if acronimo_studio != "" else ""
 outfile = Path(f"/tmp/{acronimo_prefix}study_protocol.docx")
 # pandoc = f"pandoc {tmpfname} --filter=pandoc-docx-pagebreakpy -f markdown -t docx -o {outfile}".split(" ")
-pandoc = f"pandoc {tmpfname} --lua-filter filters/pagebreak.lua -f markdown -t docx -o {outfile}".split(" ")
+# pandoc = f"pandoc {tmpfname} --lua-filter filters/pagebreak.lua --toc -f markdown -t docx -o {outfile}".split(" ")
+pandoc = f"pandoc {tmpfname} --lua-filter filters/pagebreak.lua --lua-filter=filters/toc-inject.lua -f markdown -t docx -o {outfile}".split(" ")
 subprocess.run(pandoc)
 
 

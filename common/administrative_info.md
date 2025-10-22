@@ -1,7 +1,11 @@
-**Administrative info**
+<br> 
+<br> 
+<br> 
+
 
 |                                |                                                                                                                                        |
 |:-------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
+| **Study title**                | {{TITOLO_STUDIO}}                                                                                                                      |
 | **Study acronym**              | {{ACRONIMO_STUDIO}}                                                                                                                    |
 | **Protocol Version**           | {{PROTOCOL_VERSION}}                                                                                                                   |
 | **Study registration**         | ClinicalTrials.gov                                                                                                                     |

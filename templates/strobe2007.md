@@ -11,6 +11,9 @@ elaboration](https://doi.org/10.1371/journal.pmed.0040297)*
 
 *Indicate the study’s design with a commonly used term in the title or the abstract*
 
+{{TITOLO_STUDIO}}
+
+
 
 # Abstract [1b]
 

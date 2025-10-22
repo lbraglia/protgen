@@ -1,3 +1,4 @@
+
 \newpage
 
 
@@ -31,10 +32,11 @@ brackets (e.g. [21a]) are SPIRIT 2025 item identifiers.
 
 *Title stating the trial design, population, and interventions, with identification as a protocol.*
 
-**[INFO: è buona regola anche mettere l'acronimo dello studio nel titolo. Eg
-"descrizione dello studio: the [ACRONIMO DA DECIDERE] study protocol."]**
+**[INFO: è buona regola anche mettere l'acronimo dello studio nel titolo]**
 
-... the {{ACRONIMO_STUDIO}} study protocol.
+{{TITOLO_STUDIO}}
+
+idealmente dovrebbe finire con "the {{ACRONIMO_STUDIO}} study protocol"".
 
 
 ## Structured summary [1b]
@@ -56,7 +58,7 @@ https://www.who.int/publications/i/item/international-standards-for-clinical-tri
 | Contact for public queries                    | [**ES: PI o CRC**]                |
 | Contact for scientific queries                | [**ES: PI**]                      |
 | Public title                                  |                                   |
-| Scientific title                              |                                   |
+| Scientific title                              | {{TITOLO_STUDIO}}                 |
 | Trial acronym                                 | {{ACRONIMO_STUDIO}}               |
 | Countries of recruitment                      |                                   |
 | Health condition(s) or problem(s) studied     |                                   |

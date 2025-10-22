@@ -19,24 +19,8 @@ brackets (e.g. [10a]) are STARD item identifiers.*
 *Identification as a study of diagnostic accuracy using at least one measure of
 accuracy (such as sensitivity, specificity, predictive values or AUC)*
 
+{{TITOLO_STUDIO}}
 
-
-
-# Administrative informations
-
-**Acronimo**: **DAINSERIRE**
-
-**Protocol version**: 1.0
-
-**Protocol release date**:
-
-**Promotore**: Azienda USL - IRCCS di Reggio Emilia
-
-**Proponente**: Dr.ssa/Dr. XX – Servizio
-
-**Referente statistico**: 
-
-**Referente monitoraggio**: Dr.ssa/Dr. Data Manager - Clinical Trials Center
 
 
 # Introduction
