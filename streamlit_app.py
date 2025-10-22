@@ -74,8 +74,10 @@ user_input = {
 # Protocol actual creation
 # -------------------------
 common_intros = ["administrative_info.md", "revision_chronology.md",
-                 "signature_page.md", "abbreviations.md", "toc.md"
-                 ]
+                 "signature_page.md", "abbreviations.md", "toc.md"]
+
+# Per la toc si è adottata la soluzione di questo eroe
+# https://github.com/jgm/pandoc/discussions/10609#discussioncomment-13461868
 
 # common intro
 intro = []
