@@ -91,11 +91,11 @@ intro = "\n".join(intro)
 with open(template_path, "r") as f:
     content = f.read()
 
-# common outro
-with open(commond_dir / "outro.md", "r") as f:
-    outro = f.read()
+# # common outro
+# with open(commond_dir / "outro.md", "r") as f:
+#     outro = f.read()
 
-created_template = intro + content + outro
+created_template = intro + content# + outro
 
 
 # Jinja magic
