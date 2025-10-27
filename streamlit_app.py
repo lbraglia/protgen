@@ -26,7 +26,7 @@ templates = {
     "SPIRIT 2025 (studi sperimentali)": "spirit2025.md",
     "STROBE 2007 (studi osservazionali)": "strobe2007.md",
     "STARD 2015 (studi diagnostici)": "stard2015.md",
-    "Template agnostico, italiano, semplice": "old_ctsu.md"
+    # "Template agnostico, italiano, semplice": "old_ctsu.md"
 }
 
 monomulti = {
