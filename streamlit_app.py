@@ -27,6 +27,7 @@ templates = {
     "STROBE 2007 (studi osservazionali)": "strobe2007.md",
     "STARD 2015 (studi diagnostici)": "stard2015.md",
     # "Template agnostico, italiano, semplice": "old_ctsu.md"
+    "SAP (statistical analysis plan)": "sap.md",
 }
 
 monomulti = {
