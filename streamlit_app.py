@@ -27,20 +27,20 @@ def sidebar_selbox_value(tit, d):
 # ---------
 # Sidebar
 # ---------
-st.sidebar.text_input("**Titolo studio**", key="TITOLO_STUDIO")
+st.sidebar.text_input("**Study title**", key="TITOLO_STUDIO")
 titolo_studio = st.session_state.TITOLO_STUDIO
 
-st.sidebar.text_input("**Acronimo**", key="ACRONIMO_STUDIO")
+st.sidebar.text_input("**Study Acronym**", key="ACRONIMO_STUDIO")
 acronimo_studio = st.session_state.ACRONIMO_STUDIO
 
 templates = {
-    "Protocol | SPIRIT 2025 (studi sperimentali)": "protocol_spirit2025.md",
-    "Protocol | STROBE 2007 (studi osservazionali)": "protocol_strobe2007.md",
-    "Protocol | STARD 2015 (studi diagnostici)": "protocol_stard2015.md",
-    # "Template agnostico, italiano, semplice": "old_ctsu.md"
-    "Protocol | SAP (statistical analysis plan)": "protocol_sap.md",
+    "Protocol | SPIRIT 2025": "protocol_spirit2025.md",
+    "Protocol | STROBE 2007": "protocol_strobe2007.md",
+    "Protocol | STARD 2015": "protocol_stard2015.md",
+    "Protocol | CTSU (old)": "protocol_old_ctsu.md",
+    "Protocol | SAP": "protocol_sap.md"
 }
-template_fname = sidebar_selbox_value("**Template adottato**", templates)
+template_fname = sidebar_selbox_value("**Adopted template**", templates)
 template_path = template_dir / template_fname
 
 # monomulti = {
@@ -61,7 +61,7 @@ formato = {
     "Markdown": "md",
     "MS Word": "docx"
 }
-formato_sel = sidebar_selbox_value("**Formato**", formato)
+formato_sel = sidebar_selbox_value("**File format**", formato)
 
 user_input = {
     "TITOLO_STUDIO": titolo_studio,
@@ -99,9 +99,9 @@ with open(template_path, "r") as f:
     template_content = f.read()
 
 # 2) Adding intro if needed
+# 
 # - On one hand protocols have a common intro (administrative info etc) that
 #   are imported
-#
 # - On the other article are taken vanilla, without prefixing intros
 
 if its_a_protocol:
@@ -145,7 +145,6 @@ if chosen_format == "docx":
 
 
 # 7) prepare download
-
 if chosen_format == "md":
     outfile = outfile_md
 elif chosen_format == "docx":
