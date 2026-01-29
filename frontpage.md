@@ -1,6 +1,11 @@
-# Generatore di templates
+## Templates generator
 
-Reference utili per la compilazione
+Here a simple template generator (for protocols and articles, following mainly
+[EQUATOR](https://www.equator-network.org/) guidelines) is provided.
+
+Fullfill the box on the left then push "Download". 
+
+Some bibliographic references useful for writing follows:
 
 - [SPIRIT (2025)](https://doi.org/10.1136/bmj-2024-081660)
 
