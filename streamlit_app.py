@@ -4,72 +4,75 @@ import jinja2
 import streamlit as st
 import subprocess
 import tempfile
-
 from pathlib import Path
 
-
-# Include README
-with open('frontpage.md', 'r') as fp:
-    frontpage = fp.read()
-st.markdown(frontpage)
-
-# Parameters
+# ----------
+# PARAMETERS
+# ----------
 template_dir = Path("templates")
 commond_dir = Path("common")
-
+frontpage_file = Path('frontpage.md')
 common = {
     "TODAY": dt.date.today().isoformat(),
     "PROTOCOL_VERSION": 1,
 }
 
+
+# utility for selection box
+def sitebar_selbox_value(tit, d):
+    sel = st.sidebar.selectbox(tit, d.keys())
+    return d[sel]
+
+
+# ---------
+# Sidebar
+# ---------
+st.sidebar.text_input("**Titolo studio**", key="TITOLO_STUDIO")
+titolo_studio = st.session_state.TITOLO_STUDIO
+
+st.sidebar.text_input("**Acronimo studio**", key="ACRONIMO_STUDIO")
+acronimo_studio = st.session_state.ACRONIMO_STUDIO
+
 templates = {
-    "SPIRIT 2025 (studi sperimentali)": "spirit2025.md",
-    "STROBE 2007 (studi osservazionali)": "strobe2007.md",
-    "STARD 2015 (studi diagnostici)": "stard2015.md",
+    "Protocol | SPIRIT 2025 (studi sperimentali)": "protocol_spirit2025.md",
+    "Protocol | STROBE 2007 (studi osservazionali)": "protocol_strobe2007.md",
+    "Protocol | STARD 2015 (studi diagnostici)": "protocol_stard2015.md",
     # "Template agnostico, italiano, semplice": "old_ctsu.md"
-    "SAP (statistical analysis plan)": "sap.md",
+    "Protocol | SAP (statistical analysis plan)": "protocol_sap.md",
 }
+template_fname = sitebar_selbox_value("**Template adottato**", templates)
+template_path = template_dir / template_fname
 
 monomulti = {
     "Monocentrico": "monocentrico",
     "Multicentrico": "multicentrico"
 }
+monomulti_sel = sitebar_selbox_value("**Mono/multicentrico**", monomulti)
 
-retroprospettico = {
+retroprosp = {
     "Retrospettivo": "retrospettivo",
     "Retrospettivo e Prospettico": "retrospettivo_e_prospettico",
     "Prospettico": "prospettico",
 }
-
-# User data input
-# ----------------
-st.text_input("**Titolo studio**", key="TITOLO_STUDIO")
-titolo_studio = st.session_state.TITOLO_STUDIO
-st.text_input("**Acronimo studio**", key="ACRONIMO_STUDIO")
-acronimo_studio = st.session_state.ACRONIMO_STUDIO
-
-
-def selbox_value(tit, d):
-    sel = st.selectbox(tit, d.keys())
-    return d[sel]
-
-
-template_fname = selbox_value("**Template adottato**", templates)
-template_path = template_dir / template_fname
-monomulti_sel = selbox_value("**Mono/multicentrico**", monomulti)
-retroprospettico_sel = selbox_value("**Retrospettivo/Prospettico**", retroprospettico)
-
-# st.markdown("**Opzioni**")
-# farmacologico = st.checkbox("Farmacologico")
-
+retroprosp_sel = sitebar_selbox_value("**Retrospettivo/Prospettico**",
+                                      retroprosp)
 
 user_input = {
     "TITOLO_STUDIO": titolo_studio,
     "ACRONIMO_STUDIO": acronimo_studio,
     "MONOMULTI": monomulti_sel,
-    "RETROPROSPETTICO": retroprospettico_sel,
+    "RETROPROSPETTICO": retroprosp_sel,
 }
 
+
+# ----------
+# MAIN PAGE
+# ----------
+# Include README
+with open(frontpage_file, 'r') as fp:
+    frontpage = fp.read()
+
+st.markdown(frontpage)
 
 
 # Protocol actual creation
