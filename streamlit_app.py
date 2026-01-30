@@ -38,7 +38,11 @@ templates = {
     "Protocol | STROBE 2007": "protocol_strobe2007.md",
     "Protocol | STARD 2015": "protocol_stard2015.md",
     "Protocol | CTSU (old)": "protocol_old_ctsu.md",
-    "Protocol | SAP": "protocol_sap.md"
+    "Article | STROBE 2007": "article_strobe2007.md",
+    "Article | STARD 2015": "article_stard2015.md",
+    "Article | CHEERS 2022": "article_cheers2022.md",
+    "Other | SAP": "other_sap.md",
+    "Other | HEAP": "other_heap.md",
 }
 template_fname = sidebar_selbox_value("**Adopted template**", templates)
 template_path = template_dir / template_fname
