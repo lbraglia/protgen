@@ -1,6 +1,7 @@
 # Administrative information
 
-This Health Economics Analysis Plan (HEAP) is written according to .
+This Health Economics Analysis Plan (HEAP) is written according to Thorn et al
+2021 (10.1016/j.jval.2020.10.002).
 
 |                                                   |                                                                                                                                                                       |
 |:--------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------|

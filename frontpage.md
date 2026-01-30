@@ -14,8 +14,14 @@ Some bibliographic references useful for writing follows:
   (results section is missing).
 
 - [STARD (2015)](https://doi.org/10.1136/bmjopen-2016-012799): an article
-  template for diagnostic studies. The protocol version is a re-adaptation
-  (results section is missing).
+  template for diagnostic studies. The protocol version is a re-adaptation of
+  this (with missing results section).
+
+- [CHEERS](https://doi.org/10.1016/j.jval.2021.10.008): article template for
+  health-economics studies
 
 - [SAP](https://doi.org/10.1001/jama.2017.18556) (see supplemental content for
   Explanation & Elaboration): statistical analysis plan following Jama's template
+
+- [HEAP](https://doi.org/10.1016/j.jval.2020.10.002): Health economics analysis
+  plan following ISPOR guidelines.
