@@ -1,4 +1,4 @@
-This protocol is written according to CHEERS 2022 guideline ; numbers in square
+This article is written according to CHEERS 2022 guideline ; numbers in square
 brackets (e.g. [10a]) are CHEERS item identifiers
 
 
