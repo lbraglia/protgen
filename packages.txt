@@ -1,1 +1,1 @@
-pandoc
+pandoc<=3.10
