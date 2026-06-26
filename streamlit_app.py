@@ -27,7 +27,7 @@ def sidebar_selbox_value(tit, d):
 # ---------
 # Sidebar
 # ---------
-st.sidebar.text_input("**Study title**", key="TITOLO_STUDIO")
+st.sidebar.text_input("**Study Title**", key="TITOLO_STUDIO")
 titolo_studio = st.session_state.TITOLO_STUDIO
 
 st.sidebar.text_input("**Study Acronym**", key="ACRONIMO_STUDIO")
@@ -44,7 +44,7 @@ templates = {
     "Other | SAP": "other_sap.md",
     "Other | HEAP": "other_heap.md",
 }
-template_fname = sidebar_selbox_value("**Adopted template**", templates)
+template_fname = sidebar_selbox_value("**Template**", templates)
 template_path = template_dir / template_fname
 
 # monomulti = {
@@ -62,8 +62,8 @@ template_path = template_dir / template_fname
                                       # retroprosp)
 
 formato = {
-    "Markdown": "md",
-    "MS Word": "docx"
+    "MS Word": "docx",
+    "Markdown": "md"
 }
 formato_sel = sidebar_selbox_value("**File format**", formato)
 
