@@ -4,10 +4,10 @@ Here you can find a template generator for protocols following
 [EQUATOR](https://www.equator-network.org/) guidelines mainly. Fullfill the box
 on the left then push "Download".
 
-Some bibliographic references useful for writing follows:
+<!-- Some bibliographic references useful for writing follows: -->
 
-- [SPIRIT (2025)](https://doi.org/10.1136/bmj-2024-081660): a protocol template
-  for randomised trials.
+<!-- - [SPIRIT (2025)](https://doi.org/10.1136/bmj-2024-081660): a protocol template -->
+<!--   for randomised trials. -->
 
 <!-- - [STROBE (2007)](https://doi.org/10.1371/journal.pmed.0040297): an article -->
 <!--   template for observational studies. The protocol version is a re-adaptation -->
@@ -20,8 +20,8 @@ Some bibliographic references useful for writing follows:
 <!-- - [CHEERS](https://doi.org/10.1016/j.jval.2021.10.008): article template for -->
 <!--   health-economics studies -->
 
-- [SAP](https://doi.org/10.1001/jama.2017.18556) (see supplemental content for
-  Explanation & Elaboration): statistical analysis plan following Jama's template
+<!-- - [SAP](https://doi.org/10.1001/jama.2017.18556) (see supplemental content for -->
+<!--   Explanation & Elaboration): statistical analysis plan following Jama's template -->
 
-- [HEAP](https://doi.org/10.1016/j.jval.2020.10.002): Health economics analysis
-  plan following ISPOR guidelines.
+<!-- - [HEAP](https://doi.org/10.1016/j.jval.2020.10.002): Health economics analysis -->
+<!--   plan following ISPOR guidelines. -->
