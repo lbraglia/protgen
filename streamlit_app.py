@@ -34,11 +34,11 @@ st.sidebar.text_input("**Study Acronym**", key="ACRONIMO_STUDIO")
 acronimo_studio = st.session_state.ACRONIMO_STUDIO
 
 templates = {
+    "Osservazionali (IT) | CTSU (rev)": "protocol_ctsu_rev.md",
+    "Osservazionali (EN) | CTSU EN (rev)": "protocol_ctsu_rev_en.md",
     "Sperimentali | SPIRIT 2025": "protocol_spirit2025.md",
     # "Protocol | STROBE 2007": "protocol_strobe2007.md",
     # "Protocol | STARD 2015": "protocol_stard2015.md",
-    "Osservazionali (IT) | CTSU (rev)": "protocol_ctsu_rev.md",
-    "Osservazionali (EN) | CTSU EN (rev)": "protocol_ctsu_rev_en.md",
     # "Protocol | OLD CTSU": "protocol_ctsu_old.md",
     # "Article | STROBE 2007": "article_strobe2007.md",
     # "Article | STARD 2015": "article_stard2015.md",
