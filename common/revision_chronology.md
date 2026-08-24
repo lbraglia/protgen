@@ -1,13 +1,13 @@
 \newpage
 
-**Revision Chronology**: Each time the protocol will be amended insert the "old
-version" to the list.
+**Revision Chronology**
 
 
-| **Version n.**       | **Version date** | **Modified without version change** | **Description, comments** | **Control** |
-|:---------------------|:-----------------|-------------------------------------|---------------------------|-------------|
-| {{PROTOCOL_VERSION}} | {{TODAY}}        |                                     | Initial version           |             |
-|                      |                  |                                     |                           |             |
+| **Version n.**       | **Version date** | **Description, comments, major changes from prior version** |
+|:---------------------|:-----------------|-------------------------------------------------------------|
+| {{PROTOCOL_VERSION}} | {{TODAY}}        | Initial version                                             |
+|                      |                  |                                                             |
 
 
 
+<!-- Version, Date of approval, Major changes from prior version -->

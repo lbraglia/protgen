@@ -37,14 +37,14 @@ templates = {
     "Sperimentali | SPIRIT 2025": "protocol_spirit2025.md",
     # "Protocol | STROBE 2007": "protocol_strobe2007.md",
     # "Protocol | STARD 2015": "protocol_stard2015.md",
-    "Osservazionali | CTSU (rev)": "protocol_ctsu_rev.md",
+    "Osservazionali (IT) | CTSU (rev)": "protocol_ctsu_rev.md",
     "Osservazionali (EN) | CTSU EN (rev)": "protocol_ctsu_rev_en.md",
     # "Protocol | OLD CTSU": "protocol_ctsu_old.md",
     # "Article | STROBE 2007": "article_strobe2007.md",
     # "Article | STARD 2015": "article_stard2015.md",
     # "Article | CHEERS 2022": "article_cheers2022.md",
-    "Altro | SAP": "other_sap.md",
-    "Altro | HEAP": "other_heap.md",
+    # "Altro | SAP": "other_sap.md",
+    # "Altro | HEAP": "other_heap.md",
 }
 template_fname = sidebar_selbox_value("**Template**", templates)
 template_path = template_dir / template_fname
@@ -111,7 +111,7 @@ if its_a_protocol:
     protocols_intros_templates = [
         "administrative_info.md",
         "revision_chronology.md",
-        "signature_page.md",
+        # "signature_page.md",
         "abbreviations.md",
         # https://github.com/jgm/pandoc/discussions/10609#discussioncomment-13461868
         "toc.md",

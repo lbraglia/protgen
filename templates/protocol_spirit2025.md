@@ -16,11 +16,11 @@ brackets (e.g. [21a]) are SPIRIT 2025 item identifiers.
 
 - **aggiungere piè di pagina con versione e data del protocollo**
 
-- **aggiungere indice/"Table of content" da qualche parte**
-
 - **cancellare questo elenco e tutte le frasi che danno suggerimenti nelle varie sezioni**
 
 - **fare un check della formattazione che in seguito a vari edit potrebbe essere sporca**
+
+- **aggiornare indice/"Table of content"**
 
 
 
@@ -35,8 +35,6 @@ brackets (e.g. [21a]) are SPIRIT 2025 item identifiers.
 **[INFO: è buona regola anche mettere l'acronimo dello studio nel titolo]**
 
 {{TITOLO_STUDIO}}
-
-idealmente dovrebbe finire con "the {{ACRONIMO_STUDIO}} study protocol"".
 
 
 ## Structured summary [1b]
@@ -128,8 +126,6 @@ assicurazioni; nel caso scriverli qui con il ruolo ed eventuali influenze]**
 committee, endpoint adjudication committee, data management team, and other
 individuals or groups overseeing the trial, if applicable*
 
-None applied.
-
 Trial's steering committee (TSC) will be composed by the authors of the
 protocol (**X clinicians, 1 clinical research coordinator**, 1
 biostatistician), all of whom are staff at AUSL RE IRCCS and are considered as
@@ -162,8 +158,7 @@ trial participant.
 
 The study protocol, for which no separate Statistical Analysis Plan (SAP) is
 planned, will be made publicly available through upload/attachment on
-ClinicalTrials.org of full approved version; eventually even by scientific
-publication.
+ClinicalTrials.org of full approved version.
 
 
 
@@ -261,10 +256,6 @@ considered for this study.
 *Description of trial design including type of trial (eg, parallel group,
 crossover), allocation ratio, and framework (eg, superiority, equivalence,
 non-inferiority, exploratory)*
-
-This is a parallel 1:1 patient-randomized, patient and outcome-assessor
-blinded, single-center superiority trial.
-
 
 
 
@@ -419,14 +410,6 @@ any planned restriction (eg, blocking) should be provided in a separate
 document that is unavailable to those who enrol participants or assign
 interventions*
 
-**On the day of surgery, after eligibility confirmation, patients will be
-randomized by anesthesiologist to one of two treatment. Randomization will have
-1:1 ratio, will be blocked (with variable dimension blocks, not disclosed to
-clinicians) and stratified by anesthesiologist (each of whom will perform both
-TAP and ESP procedures, to avoid possible imbalances of seniority/experience
-across treatment groups). To implement such a randomization, involved
-anesthesiologist will be communicated before accrual start to trial
-statistician and a randomization list will be generated for each one.**
 
 
 
@@ -437,9 +420,9 @@ statistician and a randomization list will be generated for each one.**
 computer/telephone; sequentially numbered, opaque, sealed containers),
 describing any steps to conceal the sequence until interventions are assigned*
 
-**Lists will be kept concealed behind the web-based randomization interface,
+Lists will be kept concealed behind the web-based randomization interface,
 integrated in trial CRF, where patient’s arm will be communicated to clinicians
-just before treatment.**
+just before treatment.
 
 
 
@@ -449,9 +432,9 @@ just before treatment.**
 *Whether the personnel who will enrol and those who will assign participants to
 the interventions will have access to the random allocation sequence*
 
-**Anesthesiologist and personnel involved in enrollment and randomization will
-have no access to assignments before the randomization procedure itself,
-provided for day of surgery.**
+Personnel involved in enrollment and randomization will have no access to
+assignments before the randomization procedure itself, which will comunicated
+the **day of treatment start**.
 
 
 
@@ -460,8 +443,6 @@ provided for day of surgery.**
 
 *Who will be blinded after assignment to interventions (eg, participants, care
 providers, outcome assessors, data analysts)*
-
-**In this trial both patients and outcome assessors will be blinded.**
 
 
 
@@ -522,45 +503,6 @@ processes to promote data quality (eg, double data entry; range checks for data
 values). Reference to where details of data management procedures can be
 accessed, if not in the protocol*
 
-Data will be collected with a dedicated eCRF developed in REDCap, a web-based
-Data Management System. REDCap is installed on a secure IT infrastructure in
-Europe and managed by the Azienda AUSL IRCSS in accordance with European
-regulations (GDPR and GCP). The system has a built-in audit trail and logging
-all user activity. The eCRF can be accessed at the following secure address:
-https://redcap.ausl.re.it/.
-
-Access to the eCRF will be strictly password protected by a two-factor
-authentication system and limited to personnel directly participating in the
-study.
-
-Access rights within the eCRF will be managed through predefined user profiles
-assigned to each study participant, ensuring that individuals can access only
-those data necessary to perform their designated tasks, in compliance with the
-study protocol, blinding procedures, and applicable regulatory requirements.
-
-Prior to study initiation, eCRF will undergo pilot testing to assess usability
-reliability and validity and to ensure that it is appropriate for capturing the
-required study data. The process will involve the Principal Investigator (PI),
-the Clinical Research Coordinator (CRC), and, if necessary, other members of
-the research team. As part of this testing phase, the data export procedures
-and the structure of the final database will also be checked to confirm
-accuracy, completeness, and compliance with the study’s protocol/SAP.
-
-Only the data requested by the protocol will be gathered. Questionnaires will
-be completed on paper and transcribed from the source to the REDcap eCRF
-system. The eCRF shall not be considered a source document for this study.
-
-The eCRF must be completed promptly after any subject evaluation or
-communication. In all cases, it remains the responsibility of the investigator
-to check that eCRFs are completed as soon as possible and that they are
-completely and correctly filled out. The eCRFs will be accessible to study
-monitors and other regulatory auditors.
-
-The data entered the eCRF by investigational staff will be checked for
-completeness and accuracy.
-
-All data will be downloaded and analyzed by authorized staff at “Azienda
-AUSL-IRCCS di Reggio Emilia.
 
 
 
@@ -578,22 +520,6 @@ including harms*
 *Definition of who will be included in each analysis (eg, all randomised
 participants), and in which group*
 
-Analysis populations are defined as follows:
-
-- Intention to treat (ITT): all randomized patient (regardless of any
-  subsequent circumstance), classified by treatment assignment performed by
-  randomization procedure (independently/ignoring treatment actually received);
-
-- Safety population: all randomized patient who received either one of the two
-  treatment, classified by treatment actually received (independently of
-  randomized allocation)
-
-
-ITT definition/patient classifications will be adopted for the all the analyses
-involving primary and all secondary outcomes excluded outcome 6 (safety/AE).
-
-For secondary outcome 6 (safety/AE) we’ll adopt the safety population
-definition/patients classification.
 
 ## Missing data handling [27c]
 
@@ -623,9 +549,6 @@ and funder; conflicts of interest and reference to where further details about
 its charter can be found, if not in the protocol. Alternatively, an explanation
 of why a DMC is not needed*
 
-**Considered that we’ll compare two procedures largely adopted in clinical
-practice (TAP/ESP) a DMC is not planned.**
-
 
 
 
@@ -646,7 +569,7 @@ None provided.
 monitoring, give explanation*
 
 Centralized data monitoring will be performed through automatic query regarding
-completeness , consistency between fields, etc. No site monitoring is planned.
+completeness, consistency between fields, etc. No site monitoring is planned.
 
 # Ethics
 
@@ -654,11 +577,11 @@ completeness , consistency between fields, etc. No site monitoring is planned.
 
 *Plans for seeking research ethics committee/institutional review board approval*
 
-**The study protocol, including final version of the Written Informed Consent
+The study protocol, including final version of the Written Informed Consent
 Form and other attached documentation will be approved by the local IEC; the
 study will then be conducted in accordance to with the ICH Harmonized
 Tripartite Guidelines for Good Clinical Practice, applicable local regulations,
-and ethical principles laid down in the Declaration of Helsinki.**
+and ethical principles laid down in the Declaration of Helsinki.
 
 
 
@@ -697,21 +620,6 @@ biological specimens in ancillary studies, if applicable*
 collected, shared, and maintained in order to protect confidentiality before,
 during, and after the trial*
 
-The Written Informed Consent Form will explain that the study data will be
-stored in a secure, web-based Data Management System (REDCap), installed on an
-IT infrastructure located within the European Union and managed by the Azienda
-AUSL-IRCCS, in compliance with European regulations (GDPR and GCP).
-
-The investigator will ensure the pseudonymization of patient data; all
-electronic records will be identified solely by a numeric ID automatically
-assigned by the REDCap application, which does not allow direct identification
-of the subject.
-
-The Subject ID log containing the correspondence between subject IDs and
-personal identifiers, will be kept strictly confidential and securely stored in
-paper format at the investigational site to enable subject identification only
-when required by applicable regulations.
-
 
 
 
@@ -719,10 +627,3 @@ when required by applicable regulations.
 
 *Provisions, if any, for ancillary and post-trial care, and for compensation to
 those who suffer harm from trial participation*
-
-
-
-
-
-
-
