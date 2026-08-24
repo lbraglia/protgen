@@ -40,10 +40,12 @@ brackets (e.g. [21a]) are SPIRIT 2025 item identifiers.
 ## Structured summary [1b]
 
 *Structured summary of trial design and methods, including items from the World
-Health Organization Trial Registration Data Set.  INFO: rimandare la
-compilazione della tabella a fine protocollo; completarla seguendo
-https://www.who.int/publications/i/item/international-standards-for-clinical-trial-registers
-(pg 21 sgg).*
+Health Organization Trial Registration Data Set.*
+
+**INFO: rimandare la compilazione della tabella a fine protocollo; completarla
+seguendo gli [international standard for clinical trial
+registers](https://www.who.int/publications/i/item/international-standards-for-clinical-trial-registers)
+(pg 21 sgg).**
 
 
 
