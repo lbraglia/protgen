@@ -8,9 +8,9 @@ brackets (e.g. [21a]) are SPIRIT 2025 item identifiers.
 
 **Lista cose da fare:**
 
-- **compilare facendo riferimento a SPIRIT 2025 explanation and elaboration
-  (https://doi.org/10.1136/bmj-2024-081660) che fornisce esempi da letteratura
-  pubblicata e spiegazioni su cosa mettere in ciascuna sezione**
+- **compilare facendo riferimento a [SPIRIT 2025 explanation and
+  elaboration](https://doi.org/10.1136/bmj-2024-081660) che fornisce esempi da
+  letteratura pubblicata e spiegazioni su cosa mettere in ciascuna sezione**
 
 - **aggiungere bibliografia alla fine**
 
