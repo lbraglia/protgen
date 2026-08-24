@@ -2,9 +2,9 @@
 
 **Abbreviations**
 
-*Define all unusual or "technical" terms related to the project. Add or delete
-as appropriate to your study. Maintain alphabetical order for ease of
-reference.*
+<!-- *Define all unusual or "technical" terms related to the project. Add or delete -->
+<!-- as appropriate to your study. Maintain alphabetical order for ease of -->
+<!-- reference.* -->
 
 | **Abbreviation/Acronym** | **Definition**                                 |
 |:-------------------------|:-----------------------------------------------|
