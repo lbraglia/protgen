@@ -17,6 +17,5 @@
 | **Contacts**                          | Contact for public or scientific queries                                                                                               |
 | **Roles and responsibilities**        | Names, affiliations, contacts and roles of protocol contributors: Steering committee, statistician, data manager                       |
 | **Recruitment/participating centres** | Sites & PI name, contacts                                                                                                              |
-|                                       |                                                                                                                                        |
 
 
