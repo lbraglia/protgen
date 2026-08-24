@@ -63,8 +63,9 @@ template_path = template_dir / template_fname
 # retroprosp_sel = sidebar_selbox_value("**Retrospettivo/Prospettico**",
 # retroprosp)
 
-formato = {"MS Word": "docx", "Markdown": "md"}
-formato_sel = sidebar_selbox_value("**File format**", formato)
+# formato = {"MS Word": "docx", "Markdown": "md"}
+# formato_sel = sidebar_selbox_value("**File format**", formato)
+formato_sel = "docx"
 
 user_input = {
     "TITOLO_STUDIO": titolo_studio,
