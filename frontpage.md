@@ -1,5 +1,5 @@
 ## Protocol template generator
 
-Here you can find a template generator for protocols following
-[EQUATOR](https://www.equator-network.org/) guidelines mainly. Fullfill the box
-on the left then push "Download".
+Questo è un generatore di strutture/template di protocollo che implementa le
+guideline [EQUATOR](https://www.equator-network.org/), dove
+disponibili. Compila il box a lato dopodiché schiaccia sul pulsante "Download".
